@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <img
+        class="logo"
+        alt="revou-logo"
+        src="https://cdn.prod.website-files.com/621804855324383d02afa44e/6218048553243812daafa4db_RevoU%20favicon.svg"
+      />
+      <nav class="menu">
+        <button>Home</button>
+        <button>Our Facilitation</button>
+        <button>Message Us</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="main-content">
+        <h3>Hi <span id="nama">-</span>, Welcome To Website</h3>
+        <p>Ini adalah website latihan pertama</p>
+        <div>
+          <img class="img-slideshow" src="assets/semeru.png" />
+          <img class="img-slideshow" src="assets/arjuno.png" />
+          <img class="img-slideshow" src="assets/bromo.png" />
+          <button onclick="plusDivs(-1)" class="btn" hidden>Previous</button>
+          <button onclick="plusDivs(1)" class="btn" hidden>Next</button>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <h2>Our Facilitation</h2>
+        <div class="facilitation-container">
+          <div class="facilitation-item">
+            <div class="facilitation-icon">
+              <img src="assets/semeru.png" alt="Gunung Semeru" />
+            </div>
+            <p>Gunung Semeru</p>
+          </div>
+          <div class="facilitation-item">
+            <div class="facilitation-icon">
+              <img src="assets/arjuno.png" alt="Gunung Arjuno" />
+            </div>
+            <p>Gunung Arjuno</p>
+          </div>
+          <div class="facilitation-item">
+            <div class="facilitation-icon">
+              <img src="assets/bromo.png" alt="Gunung Bromo" />
+            </div>
+            <p>Gunung Bromo</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-content">
+        <h1>Message Us</h1>
+        <div class="form-and-display">
+          <form name="message-form" onsubmit="return validateForm()" novalidate>
+            <label for="full-name">Nama :</label>
+            <input
+              type="text"
+              id="name"
+              name="full-name"
+              placeholder="Masukkan Nama"
+              required
+            />
+
+            <label for="birth-date">Tanggal Lahir :</label>
+            <input type="date" id="birth-date" name="birth-date" required />
+
+            <label>Jenis Kelamin :</label>
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="Laki-Laki"
+                required
+              />
+              <label for="male">Laki-Laki</label>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="Perempuan"
+                required
+              />
+              <label for="female">Perempuan</label>
+            </div>
+
+            <label for="messages">Pesan :</label>
+            <textarea
+              id="messages"
+              name="messages"
+              placeholder="Masukkan Pesan"
+              required
+            ></textarea>
+
+            <input type="submit" class="button" value="Submit" />
+          </form>
+          <div class="displayBox">
+            <p>
+              <strong>Current time :</strong>
+              <span id="sender-current-time"></span>
+            </p>
+            <p><strong>Nama :</strong> <span id="sender-full-name"></span></p>
+            <p>
+              <strong>Tanggal Lahir :</strong>
+              <span id="sender-birth-date"></span>
+            </p>
+            <p>
+              <strong>Jenis Kelamin :</strong>
+              <span id="sender-gender"></span>
+            </p>
+            <p><strong>Pesan :</strong> <span id="sender-messages"></span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Created By Abi Nugroho</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
